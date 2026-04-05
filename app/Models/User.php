@@ -48,4 +48,27 @@ class User extends Authenticatable
     return $this->belongsTo(Role::class);
 }
 
+    public function offers() {
+        return $this->hasMany(Offer::class);
+    }
+
+    public function proposals() {
+        return $this->hasMany(Proposal::class);
+    }
+
+    public function trips() {
+        return $this->hasMany(Trip::class);
+    }
+
+    public function notifications() {
+        return $this->hasMany(Notification::class);
+    }
+
+    public function reviewsGiven() {
+        return $this->hasMany(Review::class, 'reviewer_id');
+    }
+
+    public function reviewsReceived() {
+        return $this->hasMany(Review::class, 'reviewed_id');
+    }
 }
