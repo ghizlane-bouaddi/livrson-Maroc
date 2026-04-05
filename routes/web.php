@@ -2,7 +2,6 @@
 
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\OffreController;
 use Illuminate\Support\Facades\Route;
 
 
