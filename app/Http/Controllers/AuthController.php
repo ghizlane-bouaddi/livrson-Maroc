@@ -26,7 +26,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/offres');
+            return redirect()->intended('/offers');
         }
 
         return back()->withErrors([
@@ -37,7 +37,7 @@ class AuthController extends Controller
 
 
     public function showRegister() {
-    // $villes = Ville::all();
+
      $roles = Role::where('name', '!=', 'admin')->get();
 
     return view('register', compact('roles'));
@@ -47,9 +47,9 @@ class AuthController extends Controller
         $data = $request->validate([
             'name'     => 'required|string|max:255',
             'email'    => 'required|email|unique:users,email',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:6',
             'phone'    => 'nullable|string',
-            // 'ville_id' => 'required|exists:villes,id',
+
             'role_id'  => 'required|exists:roles,id',
         ]);
 
@@ -62,7 +62,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect('/offres')->with('success', 'مرحبا بك! الحساب ديالك تكريه بنجاح.');
+        return redirect('/offers');
     }
 
     public function logout(Request $request) {
@@ -70,6 +70,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/offres');
+        return redirect('/offers');
     }
 }
