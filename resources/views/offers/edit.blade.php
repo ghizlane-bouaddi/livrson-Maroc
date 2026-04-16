@@ -62,7 +62,7 @@
                         Enregistrer les modifications
                     </button>
                     <a href="{{ route('offers.index') }}" class="bg-gray-100 hover:bg-gray-200 text-gray-500 font-black py-4 px-8 rounded-2xl transition-all uppercase italic text-xs flex items-center">
-                        Annuler
+                        Annule
                     </a>
                 </div>
             </form>
