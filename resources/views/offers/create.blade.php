@@ -73,7 +73,22 @@
                     </div>
 
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+
+
+                    <div>
+                        <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Ville d'Arrivée</label>
+                        <div class="relative">
+                            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-blue-900 font-bold">●</span>
+                            <input type="text" name="arrivalCity" value="{{ old('arrivalCity') }}"
+                                placeholder="Ex: Marrakech"
+                                class="w-full bg-gray-50 border-none rounded-2xl py-4 pl-10 pr-6 focus:ring-2 focus:ring-orange-500 transition shadow-sm font-semibold text-blue-950">
+                        </div>
+                        @error('arrivalCity') <p class="text-red-500 text-xs mt-2 ml-2 font-bold">{{ $message }}</p> @enderror
+                    </div>
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
 
     <div>
         <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Date de Départ</label>
@@ -91,17 +106,7 @@
     </div>
 </div>
 
-                    <div>
-                        <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Ville d'Arrivée</label>
-                        <div class="relative">
-                            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-blue-900 font-bold">●</span>
-                            <input type="text" name="arrivalCity" value="{{ old('arrivalCity') }}"
-                                placeholder="Ex: Marrakech"
-                                class="w-full bg-gray-50 border-none rounded-2xl py-4 pl-10 pr-6 focus:ring-2 focus:ring-orange-500 transition shadow-sm font-semibold text-blue-950">
-                        </div>
-                        @error('arrivalCity') <p class="text-red-500 text-xs mt-2 ml-2 font-bold">{{ $message }}</p> @enderror
-                    </div>
-                </div>
+
 
                 <div class="pt-4">
                     <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Description & Notes</label>
