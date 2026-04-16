@@ -84,29 +84,6 @@
                     <h2 class="text-2xl font-black uppercase italic tracking-tighter">Proposer vos <span class="text-orange-500">Services</span></h2>
                 </div>
 
-                {{-- <form action="{{ route('proposals.store') }}" method="POST" class="space-y-6">
-                    @csrf
-                    <input type="hidden" name="offer_id" value="{{ $offer->id }}">
-
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                        <div class="md:col-span-1">
-                            <label class="block text-[10px] font-black uppercase tracking-widest mb-3 opacity-60 italic">Votre Prix (DH)</label>
-                            <input type="number" name="price" placeholder="0.00" required
-                                class="w-full bg-white/10 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-orange-500 transition text-white font-black text-xl placeholder:text-white/20">
-                        </div>
-                        <div class="md:col-span-3">
-                            <label class="block text-[10px] font-black uppercase tracking-widest mb-3 opacity-60 italic">Note pour le client (Optionnel)</label>
-                            <input type="text" name="note" placeholder="Ex: Je suis disponible avec un camion de 3 tonnes..."
-                                class="w-full bg-white/10 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-orange-500 transition text-white font-bold italic placeholder:text-white/20">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="w-full bg-orange-500 hover:bg-white hover:text-blue-950 text-white font-black py-5 rounded-[1.5rem] shadow-xl transition-all duration-300 uppercase italic tracking-widest flex items-center justify-center gap-3 transform hover:scale-[1.02]">
-                        <span>Envoyer ma proposition</span>
-                        <span class="text-xl">🚀</span>
-                    </button>
-                </form> --}}
-
                 <form action="{{ route('proposals.store') }}" method="POST" class="space-y-6">
     @csrf
     <input type="hidden" name="offer_id" value="{{ $offer->id }}">
@@ -123,11 +100,11 @@
             <select name="vehicle_type" required
                 class="w-full bg-white/10 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-orange-500 transition text-white font-bold italic appearance-none cursor-pointer outline-none">
                 <option value="" class="text-blue-950">Choisir...</option>
-                <option value="Petit Utilitaire" class="text-blue-950">🚗 Petit Utilitaire</option>
-                <option value="Fourgon / Transit" class="text-blue-950">🚐 Fourgon / Transit</option>
-                <option value="Camionnette 3.5t" class="text-blue-950">🚚 Camionnette 3.5t</option>
-                <option value="Poids Lourd" class="text-blue-950">🚛 Poids Lourd</option>
-                <option value="Remorque" class="text-blue-950">🏗️ Remorque</option>
+                <option value="Petit Utilitaire" class="text-blue-950">texe</option>
+                <option value="Fourgon / Transit" class="text-blue-950">voiture</option>
+                <option value="Camionnette 3.5t" class="text-blue-950">Camion</option>
+                <option value="Poids Lourd" class="text-blue-950">grosse voiture</option>
+                <option value="Remorque" class="text-blue-950">bus</option>
             </select>
         </div>
 
