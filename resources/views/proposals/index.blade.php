@@ -86,15 +86,15 @@
                 </div>
 
             </div>
-        {{-- @empty
-            <div class="py-32 text-center bg-white rounded-[4rem] border-4 border-dashed border-gray-50">
+        @empty
+            {{-- <div class="py-32 text-center bg-white rounded-[4rem] border-4 border-dashed border-gray-50">
                 <div class="text-7xl mb-6 opacity-20">⌛</div>
                 <h3 class="text-2xl font-black text-blue-950 uppercase italic tracking-tighter">Pas encore de propositions</h3>
                 <p class="text-gray-400 font-black italic text-xs mt-3 uppercase tracking-widest">
                     Les transporteurs examinent votre annonce. Vous recevrez une notification dès qu'un prix sera proposé.
                 </p>
-            </div>
-        @endforelse --}}
+            </div> --}}
+        @endforelse
     </div>
 </div>
 @endsection
