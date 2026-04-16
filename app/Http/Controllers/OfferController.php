@@ -48,23 +48,49 @@ public function index(Request $request)
 
 
 
+// public function store(Request $request)
+// {
+//     $validated = $request->validate([
+//         'title'         => 'required|string|max:100',
+//         'category_id'   => 'required|exists:categories,id',
+//         'weight'        => 'required|numeric',
+//         'departureCity' => 'required|string',
+//         'arrivalCity'   => 'required|string',
+//         'description'   => 'required|string',
+//     ]);
+
+//     $offer = new Offer($validated);
+//    $offer->user_id = auth()->id();
+//     $offer->status = 'pending';
+//     $offer->save();
+
+//     return redirect()->route('offers.index');
+// }
+
 public function store(Request $request)
 {
     $validated = $request->validate([
-        'title'         => 'required|string|max:100',
-        'category_id'   => 'required|exists:categories,id',
-        'weight'        => 'required|numeric',
-        'departureCity' => 'required|string',
-        'arrivalCity'   => 'required|string',
-        'description'   => 'required|string',
+        'title' => 'required|max:255',
+        'category_id' => 'required|exists:categories,id',
+        'weight' => 'required|numeric',
+        'departureCity' => 'required',
+        'arrivalCity' => 'required',
+        'description' => 'required',
+        $request->validate([
+    // ... الـ validation الآخر
+    'image' => 'nullable|url', // دابا كيقبل غير رابط وماشي ملف
+])
     ]);
 
     $offer = new Offer($validated);
-   $offer->user_id = auth()->id();
-    $offer->status = 'pending';
+    $offer->user_id = auth()->id();
+
+   $offer->image = $request->image;
+
+
     $offer->save();
 
-    return redirect()->route('offers.index');
+    return redirect()->route('offers.index')->with('success', 'Annonce publiée avec succès !');
 }
 
 public function show($id)
