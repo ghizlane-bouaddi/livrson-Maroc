@@ -5,54 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livrson Maroc</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    <style>
+        .logo-font { font-family: 'Montserrat', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-50 text-gray-900">
 
-    <nav class="bg-white shadow-md p-4 mb-6">
+    <nav class="bg-white shadow-sm border-b border-gray-100 p-4 mb-10 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            {{-- <a href="{{ route('offres.index') }}" class="text-2xl font-bold text-blue-600"> --}}
-                {{-- Livrson Maroc
-            </a> --}}
-            <a href="{{ route('welcome') }}" class="text-2xl font-black text-blue-900 uppercase italic">Livrson<span class="text-orange-500">Maroc</span></a>
-            <div class="flex items-center gap-6">
-                {{-- <a href="{{ route('offres.index') }}" class="text-gray-700 hover:text-blue-500">Offres</a> --}}
 
+            <a href="{{ route('offers.index') }}" class="logo-font text-2xl font-black text-blue-950 uppercase italic tracking-tighter">
+                Livrson<span class="text-orange-500">Maroc</span>
+            </a>
+
+            <div class="flex items-center gap-8">
                 @auth
-                    {{-- <a href="{{ route('profile.show') }}" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">
-                         profile
-                    </a> --}}
-                    {{-- <a href="{{ route('profile') }}" class="text-gray-700 hover:text-blue-500">Offres</a> --}}
+                    <div class="hidden md:flex items-center gap-6">
+                        @if(Auth::user()->role->name === 'client')
 
-                    <span class="text-gray-300">|</span>
+                            <a href="{{ route('offers.index') }}" class="text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
+                                Dashboard
+                            </a>
 
-                    <span class="text-sm font-medium text-gray-600">Bonjour,</span>
+                            <a href="{{ route('proposals.my_orders') }}" class="relative text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
+                                Mes Expéditions
+                                
+                            </a>
+                            @elseif(Auth::user()->role->name === 'admin')
+                                <a href="{{route('admin.dashboard')}}" class="relative text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
+                               Admin
 
-                    <form action="{{ route('logout') }}" method="POST" class="inline">
-                        @csrf
-                        <button type="submit" class="text-red-500 text-sm font-bold hover:underline">
-                            Déconnexion
-                        </button>
-                    </form>
+                            </a>
+
+                            <a href="{{ route('offers.index') }}" class="text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
+                                les offers
+                            </a>
+
+
+                        @else
+
+                            <a href="{{ route('offers.index') }}" class="text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
+                                Offres Disponibles
+                            </a>
+                            <a href="{{ route('livreur.deliveries') }}" class="text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
+                                Mes Livraisons
+                            </a>
+                        @endif
+                    </div>
+
+                    <span class="text-gray-200 hidden md:block">|</span>
+
+                    <div class="flex items-center gap-4">
+
+                        <a href="{{ route('profile.show') }}" class="flex items-center gap-3 group">
+                            <div class="text-right leading-none hidden sm:block">
+                                <p class="text-[10px] font-black text-blue-950 uppercase italic group-hover:text-orange-500 transition">{{ Auth::user()->name }}</p>
+                                <p class="text-[8px] font-bold text-orange-500 uppercase tracking-tighter">{{ Auth::user()->role->name }}</p>
+                            </div>
+                            <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-950 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-sm overflow-hidden">
+                                @if(Auth::user()->image)
+                                    <img src="{{ asset('storage/'.Auth::user()->image) }}" class="w-full h-full object-cover">
+                                @else
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                @endif
+                            </div>
+                        </a>
+
+                        <form action="{{ route('logout') }}" method="POST" class="inline">
+                            @csrf
+                            <button type="submit" class="bg-red-50 p-2 rounded-xl text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
                 @endauth
 
                 @guest
-                    <a href="{{ route('login') }}" class="text-gray-700 hover:text-blue-500">Connexion</a>
-                    <a href="{{ route('register') }}" class="border border-blue-600 text-blue-600 px-4 py-1 rounded-lg hover:bg-blue-50">
-                        Inscription
-                    </a>
+                    <div class="flex items-center gap-4">
+                        <a href="{{ route('login') }}" class="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-blue-950 transition">Connexion</a>
+                        <a href="{{ route('register') }}" class="bg-blue-950 text-white px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-blue-900/10 hover:bg-orange-500 transition-all duration-300">
+                            Rejoindre
+                        </a>
+                    </div>
                 @endguest
             </div>
         </div>
     </nav>
 
-    <main class="container mx-auto px-4">
+    <main class="container mx-auto px-4 pb-20">
         @if(session('success'))
-            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-                {{ session('success') }}
+            <div class="max-w-2xl mx-auto bg-green-50 border-l-4 border-green-500 text-green-700 p-4 rounded-xl shadow-sm mb-10 flex items-center gap-3 animate-[pulse_2s_infinite]">
+                <span class="text-xl">✅</span>
+                <p class="text-sm font-bold italic tracking-tight">{{ session('success') }}</p>
             </div>
         @endif
 
-        @yield('content') </main>
+        @yield('content')
+    </main>
+
+    <footer class="text-center py-10 border-t border-gray-100">
+        <p class="text-[9px] font-black text-gray-300 uppercase tracking-[0.5em]">Livrson Maroc &copy; 2026</p>
+    </footer>
 
 </body>
 </html>
