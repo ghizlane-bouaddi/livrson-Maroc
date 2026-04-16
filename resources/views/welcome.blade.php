@@ -461,12 +461,12 @@
 <section id="pourquoi" class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
 
-    <!-- Image on the left -->
+
     <div class="md:w-1/2">
       <img src="https://images.unsplash.com/photo-1602524201526-6f3c96187f25?auto=format&fit=crop&w=800&q=80" class="rounded-3xl shadow-2xl w-full">
     </div>
 
-    <!-- Text content on the right -->
+
     <div class="md:w-1/2 space-y-6">
       <h2 class="text-4xl font-black text-blue-900 mb-6">Pourquoi choisir LIVRSON ?</h2>
 
@@ -479,35 +479,26 @@
   </div>
 </section>
 
-<!-- COMMENT -->
-{{-- <section id="comment" class="py-20 bg-blue-900 text-white text-center">
-  <h2 class="text-4xl font-black mb-12">Comment ça marche ?</h2>
 
-  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
-    <div>1. Publiez une offre</div>
-    <div>2. Recevez des propositions</div>
-    <div>3. Choisissez le transporteur</div>
-  </div>
-</section> --}}
 <section id="comment" class="py-20 bg-blue-900 text-white text-center">
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-4xl font-black mb-12">Comment ça marche ?</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
 
-      <!-- Step 1 -->
+
       <div class="flex flex-col items-center">
         <img src="https://images.unsplash.com/photo-1581091215363-1c9f9b6f1b10?auto=format&fit=crop&w=500&q=80" class="w-32 h-32 rounded-full mb-4 shadow-lg">
         <div class="font-bold text-lg">1. Publiez une offre</div>
       </div>
 
-      <!-- Step 2 -->
+
       <div class="flex flex-col items-center">
         <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=500&q=80" class="w-32 h-32 rounded-full mb-4 shadow-lg">
         <div class="font-bold text-lg">2. Recevez des propositions</div>
       </div>
 
-      <!-- Step 3 -->
+
       <div class="flex flex-col items-center">
         <img src="https://images.unsplash.com/photo-1581092163114-df20b4f8b810?auto=format&fit=crop&w=500&q=80" class="w-32 h-32 rounded-full mb-4 shadow-lg">
         <div class="font-bold text-lg">3. Choisissez le transporteur</div>
@@ -516,7 +507,7 @@
     </div>
   </div>
 </section>
-<!-- CTA -->
+
 <section class="py-20 bg-orange-500 text-white text-center">
   <h2 class="text-4xl font-black mb-6">Commencez maintenant</h2>
   <a href="/register" class="bg-white text-orange-500 px-8 py-4 rounded-full font-bold">
@@ -524,14 +515,14 @@
   </a>
 </section>
 
-<!-- CONTACT -->
+
 <section id="contact" class="py-20 bg-white text-center">
   <h2 class="text-4xl font-black text-blue-900 mb-6">Contactez-Nous</h2>
   <p>Email: contact@livrson.ma</p>
   <p>Téléphone: +212 600 00 00 00</p>
 </section>
 
-<!-- FOOTER -->
+
 <footer class="bg-blue-950 text-white text-center py-6">
   <p>© 2026 Livrson - Plateforme de livraison</p>
 </footer>
