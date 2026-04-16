@@ -457,21 +457,6 @@
   </div>
 </section>
 
-<!-- POURQUOI -->
-{{-- <section id="pourquoi" class="py-20 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-black text-blue-900 mb-12">
-      Pourquoi choisir LIVRSON ?
-    </h2>
-
-    <div class="grid md:grid-cols-2 gap-10">
-      <div>✔️ Publier une offre facilement</div>
-      <div>✔️ Recevoir plusieurs propositions</div>
-      <div>✔️ Choisir le meilleur prix</div>
-      <div>✔️ Livraison sécurisée</div>
-    </div>
-  </div>
-</section> --}}
 
 <section id="pourquoi" class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
