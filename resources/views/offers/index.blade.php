@@ -36,7 +36,7 @@
         <div class="flex-1 flex items-center gap-3 w-full">
             <span class="text-orange-500 text-xs italic font-black uppercase tracking-tighter">De:</span>
             <input type="text" name="departure_city" value="{{ request('departure_city') }}" placeholder="Ville départ..."
-                class="w-full bg-transparent border-none focus:ring-0 font-bold italic text-sm text-blue-950 placeholder-gray-300">
+                class="w-full bg-transparent border-none focus:ring-0 focus:outline-none font-bold italic text-sm text-blue-950 placeholder-gray-300">
         </div>
 
         <div class="hidden md:block w-px h-8 bg-gray-100"></div>
@@ -44,7 +44,7 @@
         <div class="flex-1 flex items-center gap-3 w-full">
             <span class="text-blue-950 text-xs italic font-black uppercase tracking-tighter">À:</span>
             <input type="text" name="arrival_city" value="{{ request('arrival_city') }}" placeholder="Ville arrivée..."
-                class="w-full bg-transparent border-none focus:ring-0 font-bold italic text-sm text-blue-950 placeholder-gray-300">
+                class="w-full bg-transparent border-none focus:ring-0 focus:outline-none font-bold italic text-sm text-blue-950 placeholder-gray-300">
         </div>
 
         <button type="submit" class="w-full md:w-auto bg-blue-950 hover:bg-orange-500 text-white font-black py-4 px-10 rounded-full transition-all duration-300 uppercase italic text-[10px] tracking-widest flex items-center justify-center gap-2">
@@ -76,15 +76,21 @@
                     </div>
                 @endif
 
+                
                 <div class="mb-8 mt-10">
-                    <div class="w-16 h-16 bg-gray-50 rounded-[1.5rem] flex items-center justify-center text-4xl mb-6 group-hover:bg-orange-500 group-hover:rotate-12 transition-all duration-500">
-                        📦
+                    <div class="w-full h-44 bg-gray-50 rounded-[2.5rem] flex items-center justify-center overflow-hidden shadow-inner mb-6 group-hover:scale-[1.02] transition-transform duration-500">
+                        @if($offer->image)
+                            <img src="{{ $offer->image }}" alt="{{ $offer->title }}" class="w-full h-full object-cover">
+                        @else
+                            <span class="text-5xl opacity-20">📦</span>
+                        @endif
                     </div>
                     <h3 class="text-2xl font-black text-blue-950 uppercase italic leading-tight mb-2 truncate">{{ $offer->title }}</h3>
                     <p class="text-gray-400 text-[10px] font-black uppercase tracking-widest">
-                        Expédié par: <span class="text-orange-500">{{ $offer->client->name ?? 'Client' }}</span>
+                        Expédié par: <span class="text-orange-500">{{ $offer->user->name ?? 'Client' }}</span>
                     </p>
                 </div>
+
 
                 <div class="space-y-5 mb-10 border-l-2 border-dashed border-gray-100 ml-2 pl-6 relative">
                     <div class="flex items-center gap-5">
@@ -120,7 +126,7 @@
                     @if(Auth::user()->role->name === 'livrer')
                         <a href="{{ route('offers.show', $offer->id) }}"
                            class="w-full bg-orange-500 hover:bg-blue-950 text-white font-black py-5 rounded-[1.5rem] text-[10px] uppercase transition-all duration-500 text-center shadow-lg italic tracking-widest flex items-center justify-center gap-3 transform hover:-translate-y-1">
-                           
+
                             <span>Voir les détails & Proposer</span>
                         </a>
                     @elseif(Auth::user()->role->name === 'client' && $offer->user_id === Auth::id())
@@ -151,3 +157,4 @@
     </div>
 </div>
 @endsection
+
