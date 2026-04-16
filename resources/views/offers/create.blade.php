@@ -27,6 +27,23 @@
                         @error('title') <p class="text-red-500 text-xs mt-2 ml-2 font-bold">{{ $message }}</p> @enderror
                     </div>
 
+
+                    {{-- <div class="md:col-span-2">
+                        <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Photo de l'expédition</label>
+                        <input type="file" name="image"
+                            class="w-full bg-gray-50 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-orange-500 transition shadow-sm font-semibold text-blue-950 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-black file:bg-blue-950 file:text-white hover:file:bg-orange-500">
+                        @error('image') <p class="text-red-500 text-xs mt-2 ml-2 font-bold">{{ $message }}</p> @enderror
+                    </div> --}}
+
+                    <div class="md:col-span-2">
+    <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Lien de l'image (URL)</label>
+    <input type="url" name="image" value="{{ old('image') }}"
+        placeholder="https://example.com/image.jpg"
+        class="w-full bg-gray-50 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-orange-500 transition shadow-sm font-semibold text-blue-950">
+    @error('image') <p class="text-red-500 text-xs mt-2 ml-2 font-bold">{{ $message }}</p> @enderror
+</div>
+
+
                     <div>
                         <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Catégorie</label>
                         <select name="category_id"
@@ -92,7 +109,7 @@
             </form>
         </div>
 
-        
+
     </div>
 </div>
 
