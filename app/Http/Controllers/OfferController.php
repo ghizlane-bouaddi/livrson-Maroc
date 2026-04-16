@@ -76,10 +76,11 @@ public function store(Request $request)
         'departureCity' => 'required',
         'arrivalCity' => 'required',
         'description' => 'required',
-        $request->validate([
-    
-    'image' => 'nullable|url',
-])
+        // $request->validate([
+        'image' => 'nullable|url',
+        'departure_date' => 'required|date',
+        'arrival_date' => 'required|date|after_or_equal:departure_date',
+// ])
     ]);
 
     $offer = new Offer($validated);
