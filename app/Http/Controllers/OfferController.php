@@ -77,8 +77,8 @@ public function store(Request $request)
         'arrivalCity' => 'required',
         'description' => 'required',
         $request->validate([
-    // ... الـ validation الآخر
-    'image' => 'nullable|url', // دابا كيقبل غير رابط وماشي ملف
+    
+    'image' => 'nullable|url',
 ])
     ]);
 
