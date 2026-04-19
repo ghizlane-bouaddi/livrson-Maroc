@@ -38,7 +38,6 @@
         <div class="lg:col-span-2 space-y-8">
 
             <div class="bg-white rounded-[3rem] p-10 shadow-sm border border-gray-100 relative overflow-hidden">
-                {{-- <div class="absolute top-0 right-0 p-8 opacity-5 text-9xl font-black italic"></div> --}}
 
                 <span class="bg-blue-950 text-white text-[9px] font-black uppercase px-4 py-1.5 rounded-full mb-6 inline-block tracking-widest">
                     {{ $offer->category->name ?? 'Général' }}
@@ -60,24 +59,21 @@
                 </div>
 
 
-{{-- <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm mt-6"> --}}
 
     <div class="grid grid-cols-2 gap-6">
-        {{-- <div class="bg-orange-50 p-4 rounded-2xl border border-orange-100"> --}}
             <p class="text-[8px] font-black text-orange-500 uppercase tracking-widest mb-1">Date de ramassage</p>
             <p class="text-sm font-black text-blue-950 italic">
                 {{$offer->departure_date}}
             </p>
-        {{-- </div> --}}
 
-        {{-- <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100"> --}}
+
             <p class="text-[8px] font-black text-blue-900 uppercase tracking-widest mb-1">Livraison souhaitée</p>
             <p class="text-sm font-black text-blue-950 italic mb-6">
                 {{ $offer->arrival_date}}
             </p>
-        {{-- </div> --}}
+
     </div>
-{{-- </div> --}}
+
 
 
                 <div class="flex gap-12 mb-10">
@@ -131,14 +127,13 @@
 
         <div class="md:col-span-2">
             <label class="block text-[10px] font-black uppercase tracking-widest mb-3 opacity-60 italic text-white">Note (Optionnel)</label>
-            <input type="text" name="note" placeholder="Ex: Disponible immédiatement..."
+            <input type="text" name="note" placeholder="Ex:"
                 class="w-full bg-white/10 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-orange-500 transition text-white font-bold italic placeholder:text-white/20 outline-none">
         </div>
     </div>
 
     <button type="submit" class="w-full bg-orange-500 hover:bg-white hover:text-blue-950 text-white font-black py-5 rounded-[1.5rem] shadow-xl transition-all duration-300 uppercase italic tracking-widest flex items-center justify-center gap-3 transform hover:scale-[1.02]">
         <span>Envoyer ma proposition</span>
-        <span class="text-xl">🚀</span>
     </button>
 </form>
             </div>
