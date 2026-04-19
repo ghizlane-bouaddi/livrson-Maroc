@@ -22,7 +22,7 @@
                     <div class="md:col-span-2">
                         <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Titre de l'annonce</label>
                         <input type="text" name="title" value="{{ old('title') }}"
-                            placeholder="Ex: Transport d'une Namoussia 2 places"
+                            placeholder="nom"
                             class="w-full bg-gray-50 border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-orange-500 transition shadow-sm font-semibold text-blue-950">
                         @error('title') <p class="text-red-500 text-xs mt-2 ml-2 font-bold">{{ $message }}</p> @enderror
                     </div>
@@ -120,7 +120,7 @@
                     <button type="submit"
                         class="w-full bg-blue-950 hover:bg-orange-500 text-white font-black py-5 rounded-[1.5rem] shadow-2xl transform hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 uppercase tracking-widest italic flex items-center justify-center gap-3">
                         <span>Publier mon annonce</span>
-                        <span class="text-xl">🚀</span>
+                       
                     </button>
                 </div>
             </form>
