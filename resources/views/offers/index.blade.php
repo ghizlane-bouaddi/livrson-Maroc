@@ -76,7 +76,7 @@
                     </div>
                 @endif
 
-                
+
                 <div class="mb-8 mt-10">
                     <div class="w-full h-44 bg-gray-50 rounded-[2.5rem] flex items-center justify-center overflow-hidden shadow-inner mb-6 group-hover:scale-[1.02] transition-transform duration-500">
                         @if($offer->image)
@@ -146,13 +146,7 @@
 
             </div>
         @empty
-            <div class="col-span-full py-24 text-center bg-white rounded-[4rem] border-4 border-dashed border-gray-50">
-                <p class="text-gray-400 font-black italic uppercase tracking-[0.3em] text-sm leading-relaxed">
-                    {{ Auth::user()->role->name === 'client' ? "Vous n'avez aucune expédition active." : "Aucune offre n'est disponible pour le moment." }}
-                    <br>
-                    <span class="text-[10px] text-gray-300">Revenez plus tard ou publiez votre première annonce.</span>
-                </p>
-            </div>
+
         @endforelse
     </div>
 </div>
