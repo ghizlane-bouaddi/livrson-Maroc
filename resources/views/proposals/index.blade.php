@@ -5,8 +5,8 @@
 
     <div class="mb-12 flex flex-col md:flex-row justify-between items-center gap-6">
         <div>
-            <a href="{{ route('offers.index') }}" class="text-gray-400 hover:text-blue-950 font-black uppercase text-[10px] tracking-widest mb-4 inline-block transition-all italic group">
-                <span class="group-hover:-translate-x-2 transition-transform inline-block">←</span> Retour à mes expéditions
+            <a href="{{ route('offers.index') }}" class="text-blue-950 font-black uppercase text-[10px] tracking-widest mb-4 inline-block transition-all italic group">
+                Retour à mes expéditions
             </a>
             <h1 class="text-4xl font-black text-blue-950 uppercase italic tracking-tighter">
                 Offres pour : <span class="text-orange-500 underline decoration-4 underline-offset-8">{{ $offer->title }}</span>
@@ -16,7 +16,7 @@
             </p>
         </div>
 
-        <div class="bg-blue-950 px-8 py-4 rounded-[2rem] text-white shadow-xl flex items-center gap-4 border-b-4 border-orange-500">
+        <div class="bg-blue-950 px-8 py-4 rounded-[2rem] text-white shadow-xl flex items-center gap-4 ">
             <div>
                 <p class="text-[9px] font-black uppercase opacity-60 tracking-widest">Total Propositions</p>
                 <p class="text-xl font-black italic leading-none">{{ $offer->proposals->count() }} Reçues</p>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="flex items-center gap-8 flex-1 w-full">
-                    <div class="w-24 h-24 bg-gray-50 rounded-[2.5rem] flex items-center justify-center text-4xl border-4 border-white shadow-inner group-hover:bg-orange-500 group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                    <div class="w-24 h-24 bg-gray-50 rounded-[2.5rem] flex items-center justify-center text-4xl border-4 border-white shadow-inner group-hover:bg-orange-500 transition-all">
                         👤
                     </div>
                     <div class="flex-1">
@@ -64,9 +64,7 @@
                         <p class="text-5xl font-black text-blue-950 italic tracking-tighter leading-none">
                             {{ number_format($proposal->price, 0) }}<span class="text-xl text-orange-500 ml-1 underline underline-offset-4">DH</span>
                         </p>
-                        <p class="text-[9px] text-gray-300 font-bold mt-3 uppercase italic tracking-tighter">
-                            Envoyé {{ $proposal->created_at->diffForHumans() }}
-                        </p>
+                        
                     </div>
                 </div>
 
@@ -87,7 +85,7 @@
 
             </div>
         @empty
-      
+
         @endforelse
     </div>
 </div>
