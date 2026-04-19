@@ -15,7 +15,7 @@
     <nav class="bg-white shadow-sm border-b border-gray-100 p-4 mb-10 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
 
-            <a href="{{ route('offers.index') }}" class="logo-font text-2xl font-black text-blue-950 uppercase italic tracking-tighter">
+            <a href="{{ route('welcome') }}" class="logo-font text-2xl font-black text-blue-950 uppercase italic tracking-tighter">
                 Livrson<span class="text-orange-500">Maroc</span>
             </a>
 
@@ -30,7 +30,7 @@
 
                             <a href="{{ route('proposals.my_orders') }}" class="relative text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
                                 Mes Expéditions
-                                
+
                             </a>
                             @elseif(Auth::user()->role->name === 'admin')
                                 <a href="{{route('admin.dashboard')}}" class="relative text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
@@ -42,6 +42,13 @@
                                 les offers
                             </a>
 
+                            <a href="{{ route('admin.index') }}" class="text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
+                                livreurs
+                            </a>
+
+                            <a href="{{ route('admin.client') }}" class="text-[11px] font-black uppercase tracking-widest text-blue-950 hover:text-orange-500 transition">
+                                client
+                            </a>
 
                         @else
 
@@ -87,9 +94,9 @@
 
                 @guest
                     <div class="flex items-center gap-4">
-                        <a href="{{ route('login') }}" class="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-blue-950 transition">Connexion</a>
+                        <a href="{{ route('login') }}" class="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-blue-950 transition">login</a>
                         <a href="{{ route('register') }}" class="bg-blue-950 text-white px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-blue-900/10 hover:bg-orange-500 transition-all duration-300">
-                            Rejoindre
+                            rogister
                         </a>
                     </div>
                 @endguest
@@ -108,9 +115,6 @@
         @yield('content')
     </main>
 
-    <footer class="text-center py-10 border-t border-gray-100">
-        <p class="text-[9px] font-black text-gray-300 uppercase tracking-[0.5em]">Livrson Maroc &copy; 2026</p>
-    </footer>
 
 </body>
 </html>
