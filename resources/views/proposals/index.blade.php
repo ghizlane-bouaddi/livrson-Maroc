@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="flex items-center gap-8 flex-1 w-full">
-                    <div class="w-24 h-24 bg-gray-50 rounded-[2.5rem] flex items-center justify-center text-4xl border-4 border-white shadow-inner group-hover:bg-orange-500 transition-all">
+                    <div class="w-24 h-24 bg-orange-500 rounded-[2.5rem] flex items-center justify-center text-4xl border-4 border-white shadow-inner transition-all">
                         👤
                     </div>
                     <div class="flex-1">
@@ -64,7 +64,7 @@
                         <p class="text-5xl font-black text-blue-950 italic tracking-tighter leading-none">
                             {{ number_format($proposal->price, 0) }}<span class="text-xl text-orange-500 ml-1 underline underline-offset-4">DH</span>
                         </p>
-                        
+
                     </div>
                 </div>
 
