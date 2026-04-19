@@ -38,7 +38,7 @@
         <div class="lg:col-span-2 space-y-8">
 
             <div class="bg-white rounded-[3rem] p-10 shadow-sm border border-gray-100 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-8 opacity-5 text-9xl font-black italic">📦</div>
+                {{-- <div class="absolute top-0 right-0 p-8 opacity-5 text-9xl font-black italic"></div> --}}
 
                 <span class="bg-blue-950 text-white text-[9px] font-black uppercase px-4 py-1.5 rounded-full mb-6 inline-block tracking-widest">
                     {{ $offer->category->name ?? 'Général' }}
@@ -58,6 +58,27 @@
                         <p class="text-xl font-black text-blue-950 italic tracking-tighter">{{ $offer->arrivalCity }}</p>
                     </div>
                 </div>
+
+
+{{-- <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm mt-6"> --}}
+
+    <div class="grid grid-cols-2 gap-6">
+        {{-- <div class="bg-orange-50 p-4 rounded-2xl border border-orange-100"> --}}
+            <p class="text-[8px] font-black text-orange-500 uppercase tracking-widest mb-1">Date de ramassage</p>
+            <p class="text-sm font-black text-blue-950 italic">
+                {{$offer->departure_date}}
+            </p>
+        {{-- </div> --}}
+
+        {{-- <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100"> --}}
+            <p class="text-[8px] font-black text-blue-900 uppercase tracking-widest mb-1">Livraison souhaitée</p>
+            <p class="text-sm font-black text-blue-950 italic mb-6">
+                {{ $offer->arrival_date}}
+            </p>
+        {{-- </div> --}}
+    </div>
+{{-- </div> --}}
+
 
                 <div class="flex gap-12 mb-10">
                     <div>
