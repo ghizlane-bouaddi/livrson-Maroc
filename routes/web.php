@@ -44,3 +44,12 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
+Route::get('/proposals/create', [ProposalController::class, 'create'])->name('proposals.create');
+Route::post('/proposals', [ProposalController::class, 'store'])->name('proposals.store');
+Route::get('/proposals/list', [ProposalController::class, 'index'])->name('proposals.index');
+
+Route::post('/proposals/{proposal}/accept', [ProposalController::class, 'accept'])->name('proposals.accept');
+Route::get('/mes-livraisons', [ProposalController::class, 'myDeliveries'])->name('livreur.deliveries');
+Route::get('/my-orders', [ProposalController::class, 'myOrders'])->name('proposals.my_orders');
+Route::patch('/proposals/{proposal}/confirm', [ProposalController::class, 'confirmDelivery'])->name('proposals.confirm');
+Route::patch('/proposals/{proposal}/start', [ProposalController::class, 'startDelivery'])->name('proposals.start');
