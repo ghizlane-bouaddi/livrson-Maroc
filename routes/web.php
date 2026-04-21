@@ -53,3 +53,25 @@ Route::get('/mes-livraisons', [ProposalController::class, 'myDeliveries'])->name
 Route::get('/my-orders', [ProposalController::class, 'myOrders'])->name('proposals.my_orders');
 Route::patch('/proposals/{proposal}/confirm', [ProposalController::class, 'confirmDelivery'])->name('proposals.confirm');
 Route::patch('/proposals/{proposal}/start', [ProposalController::class, 'startDelivery'])->name('proposals.start');
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+
+
+    Route::get('/client/{id}/reviews', [ProfileController::class, 'clientReviews'])->name('client.reviews');
+});
+
+
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+
+
+
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/livreurs', [AdminController::class, 'livreurs'])->name('admin.index');
+
+    Route::get('/clients', [AdminController::class, 'clients'])->name('admin.client');
+});
+
