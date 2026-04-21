@@ -2,24 +2,16 @@
 
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OfferController;
+use App\Http\Controllers\ProposalController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
 
 
 
 Route::get('/', function () {
     return view('welcome');
-})->name('welcome'); // هاد السطر هو اللي كيخلي لارافيل يعرفها بهاد السمية
+})->name('welcome');
 
 
-
-
-    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-
-    Route::post('/login', [AuthController::class, 'login']);
-
-    Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
-    Route::post('/register', [AuthController::class, 'register']);
-
-
-// 3. رابط الخروج (Logout) - خاصك تكون Login باش تخرج
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
