@@ -22,11 +22,21 @@ class StoreOffreRequest extends FormRequest
     public function rules(): array
 {
     return [
-        'type_vehicle_id' => 'required|exists:type_vehicles,id',
-        'ville_depart_id' => 'required|exists:villes,id',
-        'ville_arrive_id' => 'required|exists:villes,id|different:ville_depart_id',
-        'prix' => 'required|numeric|min:0',
-        'description' => 'nullable'
+        'title' => 'required|max:255',
+        'category_id' => 'required|exists:categories,id',
+        'weight' => 'required|numeric',
+        'departureCity' => 'required',
+        'arrivalCity' => 'required',
+        'description' => 'required',
+
+        'image' => 'nullable|url',
+        'departure_date' => 'required|date',
+        'arrival_date' => 'required|date|after_or_equal:departure_date',
+        // 'type_vehicle_id' => 'required|exists:type_vehicles,id',
+        // 'ville_depart_id' => 'required|exists:villes,id',
+        // 'ville_arrive_id' => 'required|exists:villes,id|different:ville_depart_id',
+        // 'prix' => 'required|numeric|min:0',
+        // 'description' => 'nullable'
     ];
 }
 }

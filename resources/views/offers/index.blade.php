@@ -19,7 +19,7 @@
 
         @if(Auth::user()->role->name === 'client')
             <a href="{{ route('offers.create') }}" class="bg-blue-950 hover:bg-orange-500 text-white font-black py-5 px-10 rounded-[2rem] shadow-xl transform hover:scale-105 transition duration-300 flex items-center gap-4 uppercase italic text-sm tracking-widest">
-                <span class="text-2xl font-normal">+</span> Publier une Offre
+                Publier une Offre
             </a>
         @endif
     </div>
@@ -145,9 +145,11 @@
                 </div>
 
             </div>
+
         @empty
 
         @endforelse
+
     </div>
 </div>
 @endsection

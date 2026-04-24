@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Offer;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreOffreRequest;
 use Illuminate\Support\Facades\Auth;
 
 class OfferController extends Controller
@@ -67,26 +68,11 @@ public function index(Request $request)
 //     return redirect()->route('offers.index');
 // }
 
-public function store(Request $request)
+public function store(StoreOffreRequest $request)
 {
-    $validated = $request->validate([
-        'title' => 'required|max:255',
-        'category_id' => 'required|exists:categories,id',
-        'weight' => 'required|numeric',
-        'departureCity' => 'required',
-        'arrivalCity' => 'required',
-        'description' => 'required',
-        // $request->validate([
-        'image' => 'nullable|url',
-        'departure_date' => 'required|date',
-        'arrival_date' => 'required|date|after_or_equal:departure_date',
-// ])
-    ]);
 
-    $offer = new Offer($validated);
+    $offer = new Offer($request->input());
     $offer->user_id = auth()->id();
-
-   $offer->image = $request->image;
 
 
     $offer->save();

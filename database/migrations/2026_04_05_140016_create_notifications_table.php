@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_trips', function (Blueprint $table) {
+        Schema::create('notifications', function (Blueprint $table) {
             $table->id();
-            $table->string('departureCity');
-            $table->string('arrivalCity');
-            $table->date('date');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // livreur
-            $table->foreignId('vehicle_id')->constrained()->onDelete('cascade');
+            $table->text('message');
+            $table->string('type');
+            $table->boolean('is_read')->default(false);
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_trips');
+        Schema::dropIfExists('_notifications');
     }
 };

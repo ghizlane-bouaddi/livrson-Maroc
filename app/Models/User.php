@@ -52,9 +52,14 @@ class User extends Authenticatable
         return $this->hasMany(Offer::class);
     }
 
-    public function proposals() {
-        return $this->hasMany(Proposal::class);
-    }
+    // public function proposals() {
+    //     return $this->hasMany(Proposal::class);
+    // }
+
+    public function proposals()
+{
+    return $this->hasMany(Proposal::class, 'livreur_id');
+}
 
     public function trips() {
         return $this->hasMany(Trip::class);
@@ -68,7 +73,12 @@ class User extends Authenticatable
         return $this->hasMany(Review::class, 'reviewer_id');
     }
 
-    public function reviewsReceived() {
-        return $this->hasMany(Review::class, 'reviewed_id');
-    }
+    // public function reviewsReceived() {
+    //     return $this->hasMany(Review::class, 'reviewed_id');
+    // }
+
+    public function receivedReviews()
+{
+    return $this->hasMany(Review::class, 'reviewed_id')->latest();
+}
 }

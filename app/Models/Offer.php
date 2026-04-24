@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Offer extends Model
 {
      protected $fillable = [
-        'title','weight','departureCity','arrivalCity','description','status','user_id','category_id'
+        'title','image','weight','departureCity','arrivalCity','description','status','user_id','category_id','departure_date', 'arrival_date'
     ];
 
     public function client() {

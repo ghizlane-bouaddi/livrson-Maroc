@@ -94,7 +94,7 @@
 
                 @guest
                     <div class="flex items-center gap-4">
-                        <a href="{{ route('login') }}" class="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-blue-950 transition">login</a>
+                        <a href="{{ route('login') }}" class="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-blue-950 transition">Connexion</a>
                         <a href="{{ route('register') }}" class="bg-blue-950 text-white px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-blue-900/10 hover:bg-orange-500 transition-all duration-300">
                             rogister
                         </a>

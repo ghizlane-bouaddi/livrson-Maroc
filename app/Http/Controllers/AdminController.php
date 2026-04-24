@@ -33,7 +33,7 @@ class AdminController extends Controller
     }
 
     public function clients() {
-        
+
         $users = User::whereHas('role', function($q){
             $q->where('name', 'client');
         })->get();
@@ -42,4 +42,5 @@ class AdminController extends Controller
         return view('admin.index', compact('users', 'title'));
     }
 
+    
 }
