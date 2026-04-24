@@ -13,13 +13,7 @@
                 <div class="bg-white rounded-[2.5rem] p-6 shadow-xl border border-gray-50 relative overflow-hidden transition-all hover:shadow-2xl">
 
                     <div class="flex justify-between items-start mb-6">
-                        {{-- <span class="bg-blue-50 text-blue-600 text-[10px] font-black uppercase px-3 py-1 rounded-full italic">
-                            ID: #{{ $offer->id }}
-                        </span> --}}
-
-                        {{-- <span class="text-[10px] font-black uppercase px-3 py-1 rounded-full {{ $offer->status == 'delivered' ? 'bg-green-100 text-green-600' : 'bg-orange-100 text-orange-600' }}">
-                            {{$offer->status}}
-                        </span> --}}
+                        
                     </div>
 
                     <h3 class="font-black text-blue-950 text-xl uppercase mb-4 leading-tight">{{ $offer->title }}</h3>
