@@ -13,21 +13,11 @@ return new class extends Migration
 {
     Schema::create('reviews', function (Blueprint $table) {
         $table->id();
-        $table->integer('rating'); // النجوم من 1 لـ 5
+        $table->integer('rating');
         $table->text('comment')->nullable();
-
-        // الشخص اللي دار التقييم (غالباً الكليان)
         $table->foreignId('reviewer_id')->constrained('users')->onDelete('cascade');
-
-        // الشخص اللي خدا التقييم (غالباً اللفرور)
-        $table->foreignId('reviewed_id')->constrained('users')->onDelete('cascade');
-
-        // ربط التقييم بالعرض (Proposal) باش نعرفو أما خدمة هادي
         $table->foreignId('proposal_id')->nullable()->constrained()->onDelete('cascade');
-
-        // إيلا عندك Trip (سفر) تقدر تخليه إيلا كان في الدياغرام
         $table->foreignId('trip_id')->nullable()->constrained()->onDelete('cascade');
-
         $table->timestamps();
     });
 }

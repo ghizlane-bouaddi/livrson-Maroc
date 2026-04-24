@@ -17,8 +17,6 @@ return new class extends Migration
     $table->text('note')->nullable();
     $table->string('status')->default('pending');
     $table->string('vehicle_type')->nullable();
-
-    // سميه livreur_id باش تعرف بلي هاد السيد هو اللي غايهز السلعة
     $table->foreignId('livreur_id')->constrained('users')->onDelete('cascade');
     $table->foreignId('offer_id')->constrained()->onDelete('cascade');
 
