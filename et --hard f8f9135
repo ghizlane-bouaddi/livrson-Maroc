@@ -1,0 +1,63 @@
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: rebase (finish): returning to refs/heads/main
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{1}: rebase (start): checkout HEAD~5
+[33mf8f9135[m HEAD@{2}: pull: Fast-forward
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{3}: rebase (finish): returning to refs/heads/main
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{4}: rebase (start): checkout HEAD~3
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{5}: rebase (finish): returning to refs/heads/main
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{6}: rebase (start): checkout HEAD~5
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{7}: rebase (finish): returning to refs/heads/main
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{8}: rebase (start): checkout HEAD~5
+[33mf8f9135[m HEAD@{9}: commit: le progect fille rouge
+[33mb1fc8ff[m HEAD@{10}: commit: les ,igrstion
+[33mbd1df88[m HEAD@{11}: commit: les model
+[33m93d35a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{12}: commit: route Admin
+[33m5ef1a52[m HEAD@{13}: commit: route proposel
+[33m9a445a2[m HEAD@{14}: commit: wep offers
+[33md7af60f[m HEAD@{15}: commit: reoute autontifection
+[33m6c9949e[m HEAD@{16}: commit: route page welcome
+[33m66fd46a[m HEAD@{17}: commit: page my orders
+[33m4a9130a[m HEAD@{18}: commit: updae proposition offre
+[33mfad09e6[m HEAD@{19}: commit: updae proposition offre
+[33m3fb5932[m HEAD@{20}: commit: updae offer
+[33meed4c99[m HEAD@{21}: commit: updae offer show
+[33m2bb142e[m HEAD@{22}: commit: updae offer show
+[33mb45fdc0[m HEAD@{23}: commit: update page create
+[33m4bd3b8e[m HEAD@{24}: commit: update les image et les title
+[33m396a8f0[m HEAD@{25}: commit: update nav bar livrer et client
+[33mb39afe6[m HEAD@{26}: commit: create colume users
+[33m188aa3e[m HEAD@{27}: commit: create profile de livrer
+[33m9165e3a[m HEAD@{28}: commit: create profile de client
+[33m5118ee5[m HEAD@{29}: commit: controlor admin
+[33m1f1031d[m HEAD@{30}: commit: create page client et livrer et affiche admin
+[33m452cbef[m HEAD@{31}: commit: create home page and admin
+[33mce39463[m HEAD@{32}: commit: update store
+[33m145c108[m HEAD@{33}: commit: update store
+[33m26078bb[m HEAD@{34}: commit: update create
+[33mfcaf521[m HEAD@{35}: commit: update create
+[33m935bce7[m HEAD@{36}: commit: update create
+[33mcd28279[m HEAD@{37}: commit: en ajoutant image
+[33mf285c89[m HEAD@{38}: commit: en ajoutant image
+[33m590b32d[m HEAD@{39}: commit: update function sort en ajoutant
+[33m0152461[m HEAD@{40}: commit: finish controler offer function index et sort avec show et edit et destory
+[33m02e6f0f[m HEAD@{41}: commit: modefication home page
+[33mcafbe4f[m HEAD@{42}: commit: modefication home page
+[33m14db665[m HEAD@{43}: commit: login et rogister
+[33me79b82d[m HEAD@{44}: commit: suppremo page my_deliveries
+[33m6f63076[m HEAD@{45}: commit: update page propsala my deliveries
+[33mff1be9a[m HEAD@{46}: commit: update page propsala my deliveries
+[33m1cfd5b2[m HEAD@{47}: commit: update page propsala index
+[33m8b13a7c[m HEAD@{48}: commit: update page propsala index
+[33mb2ebd2c[m HEAD@{49}: commit: update page propsala
+[33m5223d6a[m HEAD@{50}: commit: modefication page show
+[33m69a22c7[m HEAD@{51}: commit: modefication page show
+[33m4f1bd8c[m HEAD@{52}: commit: modefication page index
+[33m0dc25cd[m HEAD@{53}: commit: modefication page edit
+[33mcacd5a2[m HEAD@{54}: commit: modefication page create
+[33m5bc494d[m HEAD@{55}: commit: update navbar admin et livrer et client
+[33m4a419ef[m HEAD@{56}: commit: meddefiction pour offer
+[33mea0589d[m HEAD@{57}: commit: create les model oofor et proposel et category avec vehicle et trip et reviews et notifecations
+[33m9ef71d3[m HEAD@{58}: commit: create les migration oofor et proposel et category avec vehicle et trip et reviews et notifecations
+[33m36ad6cf[m HEAD@{59}: commit: create une dachbord welcome et migration users et role avec model user et Role autontifection
+[33m91ecb34[m HEAD@{60}: commit: home et login and register
+[33m313ebd4[m HEAD@{61}: Branch: renamed refs/heads/master to refs/heads/main
+[33m313ebd4[m HEAD@{63}: commit (initial): instalation laravel

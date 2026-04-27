@@ -47,27 +47,6 @@ public function index(Request $request)
     return view('offers.create', compact('categories'));
 }
 
-
-
-// public function store(Request $request)
-// {
-//     $validated = $request->validate([
-//         'title'         => 'required|string|max:100',
-//         'category_id'   => 'required|exists:categories,id',
-//         'weight'        => 'required|numeric',
-//         'departureCity' => 'required|string',
-//         'arrivalCity'   => 'required|string',
-//         'description'   => 'required|string',
-//     ]);
-
-//     $offer = new Offer($validated);
-//    $offer->user_id = auth()->id();
-//     $offer->status = 'pending';
-//     $offer->save();
-
-//     return redirect()->route('offers.index');
-// }
-
 public function store(StoreOffreRequest $request)
 {
 

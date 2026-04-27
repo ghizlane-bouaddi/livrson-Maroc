@@ -70,4 +70,6 @@
         Déjà inscrit ? <a href="{{ route('login') }}" class="text-blue-600 hover:underline">Connectez-vous</a>
     </p>
 </div>
+
+{{-- <script src="{{ asset('storage/js/auth_validation.js') }}"></script> --}}
 @endsection

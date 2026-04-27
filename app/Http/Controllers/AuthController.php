@@ -30,7 +30,7 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Les informations que vous avez saisies sont incorrectes, veuillez vérifier l email et le mot de passe.'
+            'email' => 'Les informations que vous avez saisies sont incorrectes.'
         ]);
     }
 

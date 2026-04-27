@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-black text-blue-950 uppercase italic border-l-8 border-orange-500 pl-4 mb-10">
+    <h1 class="text-3xl font-black text-blue-950 uppercase italic pl-4 mb-10">
         Mes Livraisons
     </h1>
 
@@ -13,18 +13,16 @@
                 <div class="bg-white rounded-[2.5rem] p-6 shadow-xl border border-gray-50 relative overflow-hidden transition-all hover:shadow-2xl">
 
                     <div class="flex justify-between items-start mb-6">
-                        
+
                     </div>
 
                     <h3 class="font-black text-blue-950 text-xl uppercase mb-4 leading-tight">{{ $offer->title }}</h3>
 
                     <div class="space-y-3 mb-6">
                         <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(249,115,22,0.5)]"></div>
                             <p class="text-sm font-bold text-blue-900">{{ $offer->departureCity }}</p>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-blue-950 shadow-[0_0_10px_rgba(23,37,84,0.3)]"></div>
                             <p class="text-sm font-bold text-blue-900">{{ $offer->arrivalCity }}</p>
                         </div>
                     </div>

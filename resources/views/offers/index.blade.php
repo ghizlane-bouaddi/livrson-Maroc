@@ -7,9 +7,9 @@
         <div>
             <h1 class="text-5xl font-black text-blue-950 uppercase italic tracking-tighter leading-none mb-3">
                 @if(Auth::user()->role->name === 'client')
-                    Mes <span class="text-orange-500 underline decoration-4 underline-offset-8">Expéditions</span>
+                    Mes Expéditions
                 @else
-                    Offres <span class="text-orange-500 underline decoration-4 underline-offset-8">Disponibles</span>
+                    Offres Disponibles
                 @endif
             </h1>
             <p class="text-gray-400 font-black italic text-[10px] uppercase tracking-[0.4em] ml-1">
@@ -60,11 +60,7 @@
         @forelse($offers as $offer)
             <div class="bg-white rounded-[3rem] border border-gray-100 shadow-[0_10px_50px_rgba(0,0,0,0.03)] hover:shadow-2xl transition-all duration-700 p-10 relative overflow-hidden group">
 
-                <div class="absolute top-8 right-8">
-                    <span class="bg-blue-50 text-blue-900 text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full border border-blue-100">
-                        {{ $offer->status }}
-                    </span>
-                </div>
+                
 
                 @if(Auth::user()->role->name === 'client' && $offer->user_id === Auth::id())
                     <div class="absolute top-8 left-8">
@@ -94,7 +90,7 @@
 
                 <div class="space-y-5 mb-10 border-l-2 border-dashed border-gray-100 ml-2 pl-6 relative">
                     <div class="flex items-center gap-5">
-                        <div class="absolute -left-[7px] w-3 h-3 bg-orange-500 rounded-full shadow-[0_0_10px_#f97316]"></div>
+                        {{-- <div class="absolute -left-[7px] w-3 h-3 bg-orange-500 rounded-full shadow-[0_0_10px_#f97316]"></div> --}}
                         <div>
                             <p class="text-[9px] text-gray-400 font-black uppercase tracking-tighter">Départ</p>
                             <p class="text-base font-black text-blue-950 italic">{{ $offer->departureCity }}</p>
@@ -102,7 +98,7 @@
                     </div>
 
                     <div class="flex items-center gap-5 pt-4">
-                        <div class="absolute -left-[7px] w-3 h-3 bg-blue-900 rounded-full shadow-[0_0_10px_#1e3a8a]"></div>
+                        {{-- <div class="absolute -left-[7px] w-3 h-3 bg-blue-900 rounded-full shadow-[0_0_10px_#1e3a8a]"></div> --}}
                         <div>
                             <p class="text-[9px] text-gray-400 font-black uppercase tracking-tighter">Arrivée</p>
                             <p class="text-base font-black text-blue-950 italic">{{ $offer->arrivalCity }}</p>

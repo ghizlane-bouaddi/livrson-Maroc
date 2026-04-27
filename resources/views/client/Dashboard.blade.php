@@ -10,7 +10,6 @@
 
 <body class="bg-gray-100">
 
-<!-- Navbar -->
 
 <nav class="bg-white shadow">
 
@@ -48,7 +47,6 @@ Logout
 
 </nav>
 
-<!-- Hero -->
 
 <section class="bg-cover bg-center h-72 flex items-center justify-center text-white"
 style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70')">
@@ -67,11 +65,10 @@ Gérez vos demandes de livraison facilement
 
 </section>
 
-<!-- Content -->
 
 <div class="container mx-auto mt-10">
 
-<!-- Button -->
+
 
 <div class="flex justify-end mb-6">
 
@@ -84,11 +81,11 @@ class="bg-orange-500 text-white px-6 py-3 rounded-lg">
 
 </div>
 
-<!-- Cards -->
+
 
 <div class="grid grid-cols-2 gap-6">
 
-<!-- demande 1 -->
+
 
 <div class="bg-white p-6 rounded shadow">
 
@@ -122,7 +119,7 @@ Voir détails
 
 </div>
 
-<!-- demande 2 -->
+
 
 <div class="bg-white p-6 rounded shadow">
 
@@ -158,7 +155,7 @@ Voir détails
 
 </div>
 
-<!-- Offres -->
+
 
 <div class="mt-10 bg-white p-8 rounded shadow text-center">
 

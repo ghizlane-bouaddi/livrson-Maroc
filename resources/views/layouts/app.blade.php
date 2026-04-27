@@ -7,8 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
     <style>
-        .logo-font { font-family: 'Montserrat', sans-serif; }
+        .logo-font { font-family:  'Arial', 'sans-serif'}
     </style>
+
 </head>
 <body class="bg-gray-50 text-gray-900">
 
@@ -16,7 +17,7 @@
         <div class="container mx-auto flex justify-between items-center">
 
             <a href="{{ route('welcome') }}" class="logo-font text-2xl font-black text-blue-950 uppercase italic tracking-tighter">
-                Livrson<span class="text-orange-500">Maroc</span>
+                LivrsonMaroc
             </a>
 
             <div class="flex items-center gap-8">

@@ -9,7 +9,7 @@
                 Retour au tableau de bord
             </a>
             <h1 class="text-4xl md:text-5xl font-black text-blue-950 uppercase italic tracking-tighter">
-                Publier une <span class="text-orange-500">Expédition</span>
+                Publier une Expédition
             </h1>
             <p class="text-gray-400 font-medium mt-3 italic text-sm">Complétez les informations pour recevoir des offres de transporteurs.</p>
         </div>
@@ -64,7 +64,6 @@
                     <div>
                         <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Ville de Départ</label>
                         <div class="relative">
-                            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-orange-500 font-bold">●</span>
                             <input type="text" name="departureCity" value="{{ old('departureCity') }}"
                                 placeholder="Ex: Casablanca"
                                 class="w-full bg-gray-50 border-none rounded-2xl py-4 pl-10 pr-6 focus:ring-2 focus:ring-orange-500 transition shadow-sm font-semibold text-blue-950">
@@ -78,7 +77,6 @@
                     <div>
                         <label class="block text-[10px] font-black text-blue-900 uppercase tracking-widest mb-3 ml-2">Ville d'Arrivée</label>
                         <div class="relative">
-                            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-blue-900 font-bold">●</span>
                             <input type="text" name="arrivalCity" value="{{ old('arrivalCity') }}"
                                 placeholder="Ex: Marrakech"
                                 class="w-full bg-gray-50 border-none rounded-2xl py-4 pl-10 pr-6 focus:ring-2 focus:ring-orange-500 transition shadow-sm font-semibold text-blue-950">
@@ -120,7 +118,7 @@
                     <button type="submit"
                         class="w-full bg-blue-950 hover:bg-orange-500 text-white font-black py-5 rounded-[1.5rem] shadow-2xl transform hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 uppercase tracking-widest italic flex items-center justify-center gap-3">
                         <span>Publier mon annonce</span>
-                       
+
                     </button>
                 </div>
             </form>

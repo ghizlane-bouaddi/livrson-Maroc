@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto px-4 py-12">
-    <h1 class="text-3xl font-black text-blue-950 uppercase italic border-l-8 border-orange-500 pl-4 mb-10">
+    <h1 class="text-3xl font-black text-blue-950 uppercase italic  mb-10">
         Suivi de mes commandes
     </h1>
 
@@ -13,7 +13,6 @@
         <div class="w-1/6 text-center text-[10px] font-black uppercase tracking-widest italic text-orange-500">Départ</div>
         <div class="w-1/6 text-center text-[10px] font-black uppercase tracking-widest italic text-green-500">Arrivée</div>
         <div class="w-1/6 text-center text-[10px] font-black uppercase tracking-widest italic">Prix</div>
-        <div class="w-1/6 text-right text-[10px] font-black uppercase tracking-widest italic">Status</div>
     </div>
 
 
@@ -31,7 +30,7 @@
 
                 <div class="w-full lg:w-1/6">
                     <p class="font-black text-blue-950 text-sm uppercase italic truncate">{{ $offer->title }}</p>
-                    <p class="text-[8px] text-gray-400 font-bold tracking-widest">ID: #{{ $offer->id }}</p>
+
                 </div>
 
                 <div class="w-full lg:w-1/6 flex items-center gap-2">
@@ -60,17 +59,12 @@
                 </div>
 
 
-                <div class="w-full lg:w-1/6 text-right">
-                    <span class="text-[9px] font-black uppercase tracking-tighter px-4 py-1.5 rounded-full shadow-sm border
-                        {{ $offer->status == 'delivered' ? 'bg-green-50 border-green-200 text-green-600' : 'bg-orange-50 border-orange-200 text-orange-600' }}">
-                        {{$offer->status }}
-                    </span>
-                </div>
+
             </div>
             @endif
         @endforeach
     </div>
 
-    
+
 </div>
 @endsection
